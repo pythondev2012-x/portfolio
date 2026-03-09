@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: #0f2027; /* Zarrachalar ko'rinishi uchun to'q fon */
+    background: #0f2027; 
     color: white;
     overflow-x: hidden;
     cursor: none;
@@ -24,10 +24,7 @@ body {
     padding: 100px 20px;
     max-width: 1100px;
     margin: auto;
-    background: transparent; /* BLOK OLIB TASHLANDI */
-    backdrop-filter: none;
-    border: none;
-    box-shadow: none;
+    background: transparent;
 }
 
 h1 { font-size: 45px; margin-bottom: 10px; text-shadow: 0 0 20px rgba(0,255,204,0.3); }
@@ -36,7 +33,7 @@ h1 { font-size: 45px; margin-bottom: 10px; text-shadow: 0 0 20px rgba(0,255,204,
 h2 { 
     color: #00ffcc; 
     margin-bottom: 20px; 
-    min-height: 50px; /* Blok balandligi o'zgarmaydi */
+    min-height: 50px; 
     font-size: 28px;
 }
 
@@ -52,16 +49,34 @@ p { opacity: 0.8; font-size: 18px; margin-bottom: 30px; }
     margin-top: 30px;
 }
 
+/* LOGOTIPNI TEPAGA CHIQARISH UCHUN TUZATILGAN QISM */
 .badge {
-    background: rgba(31, 41, 55, 0.3); /* Yengil shaffoflik */
+    background: rgba(31, 41, 55, 0.3);
     border: 1px solid rgba(0, 255, 204, 0.2);
     padding: 20px;
     width: 130px;
     border-radius: 20px;
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Yangi xossalar */
+    display: flex;
+    flex-direction: column; /* Ikonka va yozuvni ustma-ust qiladi */
+    align-items: center;    /* Markazga tekislaydi */
+    justify-content: center;
+    gap: 12px;              /* Ikonka va yozuv orasidagi masofa */
 }
 
-.badge i { font-size: 38px; color: #00ffcc; margin-bottom: 10px; }
+.badge i { 
+    font-size: 38px; 
+    color: #00ffcc; 
+    margin-bottom: 0; /* Gap xossasi borligi uchun margin shart emas */
+}
+
+.badge span {
+    font-size: 14px;
+    line-height: 1.4;
+    display: block;
+}
 
 .badge:hover {
     transform: scale(1.1);
@@ -90,7 +105,7 @@ p { opacity: 0.8; font-size: 18px; margin-bottom: 30px; }
 
 .social-links a {
     font-size: 26px;
-    color: white;
+    color: rgb(38, 212, 183);
     margin: 15px;
     transition: 0.3s;
     opacity: 0.6;
