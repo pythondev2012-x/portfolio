@@ -1,6 +1,14 @@
 from django.shortcuts import render
+from .models import About, Project
 
 
-def home(request):
+def index(request):
+    about = About.objects.first()
+    projects = Project.objects.all()
 
-    return render(request, "index.html")
+    context = {
+        "about": about,
+        "projects": projects
+    }
+
+    return render(request, "index.html", context)
